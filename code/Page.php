@@ -25,7 +25,11 @@
 					
 			return $fields;
 		}
-				
+		
+		public function NavNoFollow()
+		{
+			return $this->owner->NoFollow ? "rel='nofollow'" : "";	
+		}
 	}
 	
 	class IQSEO_Page_Controller extends Extension {
@@ -63,10 +67,5 @@
 					if (in_array($URL_Full,$RedirectURLs) || in_array($URL_Path,$RedirectURLs)) return $Page;
 				}
 			}
-		}
-				
-		public function NavNoFollow(){
-			return $this->owner->NoFollow ? "rel='nofollow'" : "";	
-		}
-		
+		}		
 	}

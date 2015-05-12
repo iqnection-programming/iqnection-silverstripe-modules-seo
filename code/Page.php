@@ -21,7 +21,6 @@
 				$fields->addFieldToTab('Root.Main.Metadata', $keywordsField = new TextareaField('MetaKeywords','Meta Keywords'),"ExtraMeta" );
 				$keywordsField->setRows(1);
 				$fields->addFieldToTab('Root.Main.Metadata', new TextareaField('URLRedirects','301 Redirects') );
-				$codeField->setRows(45);
 			}
 					
 			return $fields;

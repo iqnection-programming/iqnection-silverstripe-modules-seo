@@ -1,3 +1,9 @@
 SiteConfig:
   extensions:
     - SiteConfig_GoogleAnalytics
+Page:
+  extensions:
+    - IQSEO_Page
+Page_Controller:
+  extensions:
+    - IQSEO_Page_Controller

@@ -7,3 +7,8 @@ Page:
 Page_Controller:
   extensions:
     - IQSEO_Page_Controller
+LeftAndMain:
+  extra_requirements_css:
+    - iq-seo/css/cms/leftandmainadditions.css
+  extra_requirements_javascript:
+    - iq-seo/cms/javascript/leftandmainadditions.js

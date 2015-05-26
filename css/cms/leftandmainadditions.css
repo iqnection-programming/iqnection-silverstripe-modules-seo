@@ -1,4 +1,4 @@
 
 .field_count								{ margin-rihgt:20px; float:right; }	
-.field_count:before							{ content:'('; }
+.field_count:before							{ content:'(Length: '; }
 .field_count:after							{ content:')'; }

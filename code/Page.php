@@ -3,6 +3,7 @@
 	class IQSEO_Page extends Extension{				
 		
 		private static $db = array(
+			'MetaTitle' => 'Varchar(255)',
 			"NoFollow" => "Boolean",
 			'URLRedirects' => 'Text',
 			'MetaKeywords' => 'Text'
@@ -16,13 +17,22 @@
 		
 		public function updateCMSFields(FieldList $fields)
 		{
-			if( permission::check('ADMIN') ){
+			$fields->addFieldToTab('Root.Main.Metadata', $keywordsField = new TextareaField('MetaKeywords','Meta Keywords'),"ExtraMeta" );
+			$fields->addFieldToTab('Root.Main.Metadata', new TextField('MetaTitle','Meta Title'),'MetaDescription' );
+			foreach(array('MetaTitle','MetaDescription','MetaKeywords') as $MetaFieldName)
+			{
+				$oldField = $fields->dataFieldByName($MetaFieldName);
+				$oldField->setTitle($oldField->Title().'<span class="field_count">'.strlen($this->owner->$MetaFieldName).'</span>');
+			}
+			
+			$keywordsField->setRows(1);
+				
+			if( permission::check('ADMIN') )
+			{				
 				$fields->addFieldToTab("Root.Main", new CheckboxField("NoFollow", "Set nav link to no-follow?"),"MetaDescription");
-				$fields->addFieldToTab('Root.Main.Metadata', $keywordsField = new TextareaField('MetaKeywords','Meta Keywords'),"ExtraMeta" );
-				$keywordsField->setRows(1);
 				$fields->addFieldToTab('Root.Main.Metadata', new TextareaField('URLRedirects','301 Redirects') );
 			}
-					
+			
 			return $fields;
 		}
 		

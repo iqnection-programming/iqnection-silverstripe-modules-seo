@@ -30,7 +30,7 @@
 			if( permission::check('ADMIN') )
 			{				
 				$fields->addFieldToTab("Root.Main", new CheckboxField("NoFollow", "Set nav link to no-follow?"),"MetaDescription");
-				$fields->addFieldToTab('Root.Main.Metadata', new TextareaField('URLRedirects','301 Redirects') );
+				$fields->addFieldToTab('Root.Main.Metadata', TextareaField::create('URLRedirects','301 Redirects')->setRightTitle('Enter only the old URL path that should be redirected to this page. For example /test-page.html') );
 			}
 			
 			return $fields;

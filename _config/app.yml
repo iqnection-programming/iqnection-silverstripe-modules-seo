@@ -11,4 +11,4 @@ LeftAndMain:
   extra_requirements_css:
     - iq-seo/css/cms/leftandmainadditions.css
   extra_requirements_javascript:
-    - iq-seo/cms/javascript/leftandmainadditions.js
+    - iq-seo/javascript/cms/leftandmainadditions.js

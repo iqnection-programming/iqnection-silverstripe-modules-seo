@@ -12,3 +12,6 @@ LeftAndMain:
     - iq-seo/css/cms/leftandmainadditions.css
   extra_requirements_javascript:
     - iq-seo/javascript/cms/leftandmainadditions.js
+SiteConfig:
+  extensions:
+    - SiteConfig_AdditionalCode

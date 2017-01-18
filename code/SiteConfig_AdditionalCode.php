@@ -2,7 +2,6 @@
 
 class SiteConfig_AdditionalCode extends DataExtension 
 {
-
 	private static $db = array(
 		'AdditionalHeaderCode' => 'Text',
 		'AdditionalFooterCode' => 'Text',

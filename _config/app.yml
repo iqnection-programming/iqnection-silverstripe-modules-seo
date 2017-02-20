@@ -1,6 +1,7 @@
 SiteConfig:
   extensions:
     - SiteConfig_GoogleAnalytics
+    - SiteConfig_AdditionalCode
 Page:
   extensions:
     - IQSEO_Page
@@ -12,6 +13,3 @@ LeftAndMain:
     - iq-seo/css/cms/leftandmainadditions.css
   extra_requirements_javascript:
     - iq-seo/javascript/cms/leftandmainadditions.js
-SiteConfig:
-  extensions:
-    - SiteConfig_AdditionalCode

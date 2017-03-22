@@ -23,4 +23,11 @@ class SiteConfig_AdditionalCode extends DataExtension
 			);
 		}
 	}
+	
+	public function updateGeneratedTemplateCache($cache)
+	{
+		$cache['additional_head'] = $this->owner->AdditionalHeaderCode;
+		$cache['additional_foot'] = $this->owner->AdditionalFooterCode;
+		return $cache;
+	}
 }

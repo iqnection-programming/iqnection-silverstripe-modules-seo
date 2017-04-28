@@ -1,6 +1,10 @@
 ## Package: iqnection-silverstripe-3-modules-seo
 # Change Log
 
+## [1.0.3]
+- Moved Additional Code to Developer Tabset in site settings
+- Removed ADMIN permissions on additional metadata fields
+
 ## [1.0.2]
 - Added functionality for additional code caching when other sites share templates
 

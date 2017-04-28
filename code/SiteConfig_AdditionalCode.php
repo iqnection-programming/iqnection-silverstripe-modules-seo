@@ -9,25 +9,16 @@ class SiteConfig_AdditionalCode extends DataExtension
 
 	public function updateCMSFields(FieldList $fields) 
 	{
-		if( permission::check('ADMIN') )
-		{
-			$fields->addFieldToTab('Root.AdditionalCode', CodeEditorField::create('AdditionalHeaderCode','Additional Header JS/CSS Code',50)
-				->addExtraClass('stacked')
-				->setRows(30)
-				->setMode('html')
-			);
-			$fields->addFieldToTab('Root.AdditionalCode', CodeEditorField::create('AdditionalFooterCode','Additional Footer JS/CSS Code',50)
-				->addExtraClass('stacked')
-				->setRows(30)
-				->setMode('html')
-			);
-		}
-	}
-	
-	public function updateGeneratedTemplateCache($cache)
-	{
-		$cache['additional_head'] = $this->owner->AdditionalHeaderCode;
-		$cache['additional_foot'] = $this->owner->AdditionalFooterCode;
-		return $cache;
+		$tab = $fields->findOrMakeTab('Root.Developer.AdditionalCode');
+		$tab->push(CodeEditorField::create('AdditionalHeaderCode','Additional Header JS/CSS Code',50)
+			->addExtraClass('stacked')
+			->setRows(30)
+			->setMode('html')
+		);
+		$tab->push(CodeEditorField::create('AdditionalFooterCode','Additional Footer JS/CSS Code',50)
+			->addExtraClass('stacked')
+			->setRows(30)
+			->setMode('html')
+		);
 	}
 }

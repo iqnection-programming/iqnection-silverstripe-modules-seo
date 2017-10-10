@@ -1,6 +1,9 @@
 ## Package: iqnection-silverstripe-3-modules-seo
 # Change Log
 
+## [1.0.4]
+- Added ability to update redirector found page in extension and/or Page class
+
 ## [1.0.3]
 - Moved Additional Code to Developer Tabset in site settings
 - Removed ADMIN permissions on additional metadata fields

@@ -1,5 +1,9 @@
-## Package: iqnection-silverstripe-3-modules-seo
+## Package: iqnection-silverstripe-modules-seo
 # Change Log
+
+## [2.0.0]
+- Updated for SilverStripe 4
+- Migrated all GA functionality to this module
 
 ## [1.0.4]
 - Added ability to update redirector found page in extension and/or Page class

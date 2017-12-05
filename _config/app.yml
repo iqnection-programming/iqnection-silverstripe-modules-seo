@@ -1,15 +1,14 @@
-SiteConfig:
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - SiteConfig_GoogleAnalytics
-    - SiteConfig_AdditionalCode
+    - IqSeoSiteConfig
 Page:
   extensions:
-    - IQSEO_Page
-Page_Controller:
+    - IqSeoPage
+PageController:
   extensions:
-    - IQSEO_Page_Controller
-LeftAndMain:
+    - IqSeoPageController
+SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - iq-seo/css/cms/leftandmainadditions.css
+    - iq-seo/css/leftandmainadditions.css
   extra_requirements_javascript:
-    - iq-seo/javascript/cms/leftandmainadditions.js
+    - iq-seo/javascript/leftandmainadditions.js

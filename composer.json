@@ -1,6 +1,6 @@
 {
 	"name": "iqnection-modules/seo",
-	"description": "IQnection SilverStripe 4 SEO Module",
+	"description": "IQnection SilverStripe SEO Module",
 	"type": "silverstripe-module",
 	"keywords": ["iqnection","modules"],
 	"authors": [

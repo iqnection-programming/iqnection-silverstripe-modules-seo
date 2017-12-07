@@ -42,7 +42,7 @@ class IqSeoPage extends ORM\DataExtension
 		return $this->owner->NoFollow ? "rel='nofollow'" : "";	
 	}
 	
-	public function onBeforeWrite($owner)
+	public function onBeforeWrite()
 	{
 		if ($URLRedirects = $owner->URLRedirects)
 		{

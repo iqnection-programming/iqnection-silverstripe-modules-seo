@@ -1,14 +1,21 @@
+---
+Name: iqseo
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - IqSeoSiteConfig
+    - IqSeoSiteConfigExtension
 Page:
   extensions:
-    - IqSeoPage
+    - IqSeoPageExtension
 PageController:
   extensions:
-    - IqSeoPageController
+    - IqSeoPageControllerExtension
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - iq-seo/css/leftandmainadditions.css
+    - iq-seo/cms/css/leftandmainadditions.css
   extra_requirements_javascript:
-    - iq-seo/javascript/leftandmainadditions.js
+    - iq-seo/cms/javascript/leftandmainadditions.js
+---

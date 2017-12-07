@@ -1,4 +1,4 @@
-## Package: iqnection-silverstripe-modules-seo
+## Package: iqnection-silverstripe-4-modules-seo
 # Change Log
 
 ## [2.0.0]

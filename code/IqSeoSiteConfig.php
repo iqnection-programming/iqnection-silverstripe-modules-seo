@@ -13,7 +13,7 @@ class IqSeoSiteConfig extends ORM\DataExtension
 
 	public function updateCMSFields(Forms\FieldList $fields) 
 	{
-		$fields->addFieldToTab("Root.GoogleAnalytics", Forms\TextField::create("GoogleTrackingUniversal", "Google Analytics ID (Universal Code)"));
+		$fields->addFieldToTab("Root.GoogleAnalytics", Forms\TextField::create("GoogleTrackingUniversal", "Google Analytics ID (Universal Code)")->addExtraClass('monotype'));
 		
 		$tab = $fields->findOrMakeTab('Root.Developer.AdditionalCode');
 		$tab->push( Forms\TextareaField::create('AdditionalHeaderCode','Additional Header JS/CSS Code',50)

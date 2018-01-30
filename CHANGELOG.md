@@ -1,5 +1,9 @@
-## Package: iqnection-silverstripe-4-modules-seo
+## Package: iqnection-silverstripe-modules-seo
 # Change Log
+
+## [2.0.1]
+- Added implementation for Google Tag Manager
+- removed some uneeded files accidentally left in from development
 
 ## [2.0.0]
 - Updated for SilverStripe 4

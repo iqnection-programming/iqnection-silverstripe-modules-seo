@@ -1,4 +1,4 @@
-# iqnection-silverstripe-4-modules-seo
+# iqnection-silverstripe-modules-seo
 SilverStripe 4 SEO Module
 
 ### Adds fields for Google Analytics code. 
@@ -11,3 +11,11 @@ When populated, IQ templating will automatically insert code into HTML head
 - MetaKeywords: for those that still use this
 
 ## Adds fields for including additional tags/elements in <head></head>, and before </body> close
+
+## If using Google Tag Manager, be sure to add the following code to your templates
+
+# Add inside your <head> tag before any other scripts:
+<% if $SiteConfig.GoogleTagManagerHeadCode %>$SiteConfig.GoogleTagManagerHeadCode.RAW<% end_if %>
+
+# Add just insode your opening <body> element
+<% if $SiteConfig.GoogleTagManagerBodyCode %>$SiteConfig.GoogleTagManagerBodyCode.RAW<% end_if %>

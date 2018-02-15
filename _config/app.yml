@@ -1,8 +1,5 @@
 ---
 Name: iqseo
-After:
-  - 'framework/*'
-  - 'cms/*'
 ---
 SilverStripe\SiteConfig\SiteConfig:
   extensions:

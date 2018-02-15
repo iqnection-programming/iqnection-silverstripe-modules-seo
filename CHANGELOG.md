@@ -1,6 +1,9 @@
 ## Package: iqnection-silverstripe-modules-seo
 # Change Log
 
+## [2.0.2]
+- removed "After" declaration in _config/app.yml
+
 ## [2.0.1]
 - Added implementation for Google Tag Manager
 - removed some uneeded files accidentally left in from development

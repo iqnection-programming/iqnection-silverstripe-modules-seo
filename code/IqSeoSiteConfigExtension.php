@@ -44,4 +44,11 @@ class IqSeoSiteConfigExtension extends ORM\DataExtension
 			return $this->owner->renderWith('GoogleAnalytics');
 		}
 	}
+	
+	public function updateGeneratedTemplateCache($cache)
+	{
+		$cache['AdditionalHeaderCode'] = $this->owner->AdditionalHeaderCode;
+		$cache['AdditionalFooterCode'] = $this->owner->AdditionalFooterCode;
+		return $cache;
+	}
 }

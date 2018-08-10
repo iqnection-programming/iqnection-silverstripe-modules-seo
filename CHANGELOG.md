@@ -1,6 +1,9 @@
 ## Package: iqnection-silverstripe-modules-seo
 # Change Log
 
+## [2.0.0]
+- Updated for SilverStripe 4+
+
 ## [2.0.2.1]
 - Added extension method to update template cache with site config additional code
 

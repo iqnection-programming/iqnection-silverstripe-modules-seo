@@ -1,10 +1,12 @@
 <?php
 
+namespace IQnection\SEO\Page;
+
 use SilverStripe\Forms;
 use SilverStripe\ORM;
 use SilverStripe\Control;
 
-class IqSeoPageExtension extends ORM\DataExtension
+class PageExtension extends ORM\DataExtension
 {				
 	private static $db = array(
 		'MetaTitle' => 'Varchar(255)',

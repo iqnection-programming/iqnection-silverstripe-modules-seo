@@ -1,9 +1,11 @@
 <?php
 
+namespace IQnection\SEO\SiteConfig;
+
 use SilverStripe\Forms;
 use SilverStripe\ORM;
 
-class IqSeoSiteConfigExtension extends ORM\DataExtension 
+class SiteConfigExtension extends ORM\DataExtension 
 {
 	private static $db = array(
 		'AdditionalHeaderCode' => 'Text',

@@ -3,16 +3,16 @@ Name: iqseo
 ---
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - IqSeoSiteConfigExtension
+    - IQnection\SEO\SiteConfig\SiteConfigExtension
 Page:
   extensions:
-    - IqSeoPageExtension
+    - IQnection\SEO\Page\PageExtension
 PageController:
   extensions:
-    - IqSeoPageControllerExtension
+    - IQnection\SEO\Page\PageControllerExtension
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - iq-seo/cms/css/leftandmainadditions.css
+    - iqnection-modules/seo:css/leftandmainadditions.css
   extra_requirements_javascript:
-    - iq-seo/cms/javascript/leftandmainadditions.js
+    - iqnection-modules/seo:javascript/leftandmainadditions.js
 ---

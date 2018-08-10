@@ -1,12 +1,14 @@
 <?php
 
+namespace IQnection\SEO\Page;
+
 use SilverStripe\ORM;
 use SilverStripe\Core;
 use SilverStripe\Control;
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\View\Requirements;
 
-class IqSeoPageControllerExtension extends Core\Extension 
+class PageControllerExtension extends Core\Extension 
 {
 	public function onAfterInit() 
 	{

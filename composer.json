@@ -1,7 +1,7 @@
 {
 	"name": "iqnection-modules/seo",
 	"description": "IQnection SilverStripe SEO Module",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"license": "BSD-3-Clause",
 	"keywords": ["iqnection","modules"],
 	"authors": [

@@ -16,7 +16,7 @@ class PageControllerExtension extends Core\Extension
 		 * Custom handler to redirect invalid url's to the home page, so we never have a 404 error
 		 * will first check if there is already a redirect provided for a specific page
 		 */
-		if ($this->owner->ErrorCode == 404)
+		if ( (Control\Director::isLive()) && ($this->owner->ErrorCode == 404) )
 		{
 			$RedirectPage = $this->Find404RedirectPage();
 			$response = new Control\HTTPResponse_Exception();

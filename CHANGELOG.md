@@ -1,6 +1,9 @@
 ## Package: iqnection-silverstripe-modules-seo
 # Change Log
 
+## [2.1.1]
+- moved template into correct location
+
 ## [2.1.0]
 - Updated for SilverStripe 4+
 

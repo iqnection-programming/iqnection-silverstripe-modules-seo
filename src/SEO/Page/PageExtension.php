@@ -46,7 +46,7 @@ class PageExtension extends ORM\DataExtension
 	
 	public function onBeforeWrite()
 	{
-		if ($URLRedirects = $owner->URLRedirects)
+		if ($URLRedirects = $this->owner->URLRedirects)
 		{
 			$RedirectURLs = explode("\n",$URLRedirects);
 			$NewRedirectURLs = array();
@@ -58,7 +58,7 @@ class PageExtension extends ORM\DataExtension
 				str_replace("//","/",$NewRedirectURL);
 				$NewRedirectURLs[] = $NewRedirectURL;
 			}
-			$owner->URLRedirects = implode("\n",$NewRedirectURLs);
+			$this->owner->URLRedirects = implode("\n",$NewRedirectURLs);
 		}
 	}
 }

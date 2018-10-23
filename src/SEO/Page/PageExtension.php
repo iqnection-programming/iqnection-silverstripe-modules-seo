@@ -23,19 +23,20 @@ class PageExtension extends ORM\DataExtension
 	
 	public function updateCMSFields(Forms\FieldList $fields)
 	{
-		$fields->addFieldToTab('Root.Main.Metadata', $keywordsField = Forms\TextareaField::create('MetaKeywords','Meta Keywords'),"ExtraMeta" );
-		$fields->addFieldToTab('Root.Main.Metadata', Forms\TextField::create('MetaTitle','Meta Title'),'MetaDescription' );
-		foreach(array('MetaTitle','MetaDescription','MetaKeywords') as $MetaFieldName)
+		if ($fields->fieldByName('Root.Main.Metadata'))
 		{
-			$oldField = $fields->dataFieldByName($MetaFieldName);
-			$oldField->setTitle($oldField->Title())->setDescription('<span class="field_count">'.strlen($this->owner->$MetaFieldName).'</span>');
-		}
-		
-		$keywordsField->setRows(1);
+			$fields->addFieldToTab('Root.Main.Metadata', Forms\TextareaField::create('MetaKeywords','Meta Keywords')
+				->setRows(1) ,"ExtraMeta" );
+			$fields->addFieldToTab('Root.Main.Metadata', Forms\TextField::create('MetaTitle','Meta Title'),'MetaDescription' );
+			foreach(array('MetaTitle','MetaDescription','MetaKeywords') as $MetaFieldName)
+			{
+				$fields->dataFieldByName($MetaFieldName)
+					->setDescription('<span class="field_count">'.strlen($this->owner->$MetaFieldName).'</span>');
+			}
 			
-		$fields->addFieldToTab("Root.Main", Forms\CheckboxField::create("NoFollow", "Set nav link to no-follow?"),"MetaDescription");
-		$fields->addFieldToTab('Root.Main.Metadata', Forms\TextareaField::create('URLRedirects','301 Redirects')->setRightTitle('Enter only the old URL path that should be redirected to this page. For example /test-page.html') );
-		
+			$fields->addFieldToTab("Root.Main", Forms\CheckboxField::create("NoFollow", "Set nav link to no-follow?"),"MetaDescription");
+			$fields->addFieldToTab('Root.Main.Metadata', Forms\TextareaField::create('URLRedirects','301 Redirects')->setRightTitle('Enter only the old URL path that should be redirected to this page. For example /test-page.html') );
+		}
 		return $fields;
 	}
 	

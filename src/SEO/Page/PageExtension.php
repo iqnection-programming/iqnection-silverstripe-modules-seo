@@ -30,8 +30,13 @@ class PageExtension extends ORM\DataExtension
 			$fields->addFieldToTab('Root.Main.Metadata', Forms\TextField::create('MetaTitle','Meta Title'),'MetaDescription' );
 			foreach(array('MetaTitle','MetaDescription','MetaKeywords') as $MetaFieldName)
 			{
-				$fields->dataFieldByName($MetaFieldName)
-					->setDescription('<span class="field_count">'.strlen($this->owner->$MetaFieldName).'</span>');
+				if($this->owner->$MetaFieldName) {
+					$fields->dataFieldByName($MetaFieldName)
+						->setDescription('<span class="field_count">'.strlen($this->owner->$MetaFieldName).'</span>');					
+				} else {
+					$fields->dataFieldByName($MetaFieldName)
+						->setDescription('<span class="field_count">0</span>');					
+				}
 			}
 			
 			$fields->addFieldToTab("Root.Main", Forms\CheckboxField::create("NoFollow", "Set nav link to no-follow?"),"MetaDescription");
